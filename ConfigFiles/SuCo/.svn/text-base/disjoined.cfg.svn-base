@@ -1,0 +1,6 @@
+{
+"name":"Disjoined",
+"SuCoLevel":"Support",
+"SuCoFitnessDecorators":["reeval", "distance", "joined"],
+"evalsPerGeneration":1,
+"parallelPopulations":30}

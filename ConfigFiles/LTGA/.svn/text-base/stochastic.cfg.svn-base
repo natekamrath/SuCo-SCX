@@ -1,0 +1,5 @@
+{"name":"stochastic",
+"newway":true,
+"stochastic": true,
+"always":true,
+"novelMutation":true}

@@ -1,0 +1,10 @@
+{"problemName":"neighbor5",
+"geneType":"INT",
+"mutation":"bitFlip",
+"dimensions":30,
+"min":0,
+"max":1,
+"maxFitness":1,
+"problem":"NeighborNK",
+"problemSeed":0,
+"k":5}

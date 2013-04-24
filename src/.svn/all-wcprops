@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/research/nclab/!svn/ver/2026/trunk/SCX/src
+END
+Population.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/research/nclab/!svn/ver/2024/trunk/SCX/src/Population.py
+END
+Fitness.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/research/nclab/!svn/ver/2026/trunk/SCX/src/Fitness.py
+END
+Util.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/research/nclab/!svn/ver/1815/trunk/SCX/src/Util.py
+END
+ParentSelection.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/research/nclab/!svn/ver/1663/trunk/SCX/src/ParentSelection.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/research/nclab/!svn/ver/1568/trunk/SCX/src/__init__.py
+END
+Mutation.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/research/nclab/!svn/ver/2021/trunk/SCX/src/Mutation.py
+END
+Analysis.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/research/nclab/!svn/ver/1830/trunk/SCX/src/Analysis.py
+END
+Experiments.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/research/nclab/!svn/ver/2021/trunk/SCX/src/Experiments.py
+END
+GeneTypes.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/research/nclab/!svn/ver/1752/trunk/SCX/src/GeneTypes.py
+END
+Crossover.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/research/nclab/!svn/ver/2026/trunk/SCX/src/Crossover.py
+END
+SurvivorSelection.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/research/nclab/!svn/ver/1568/trunk/SCX/src/SurvivorSelection.py
+END

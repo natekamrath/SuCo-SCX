@@ -1,0 +1,5 @@
+{"solverName":"scx",
+"crossover":"scx",
+"initialCrossoverLength": 5,
+"scxRecombination":"fixedPointReproduction",
+"scxMutation":"scxOriginal"}

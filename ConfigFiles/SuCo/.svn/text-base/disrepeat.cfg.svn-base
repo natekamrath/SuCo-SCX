@@ -1,0 +1,6 @@
+{
+"name":"Distance+Repeat",
+"SuCoLevel":"Support",
+"SuCoFitnessDecorators":["reeval", "distance"],
+"evalsPerGeneration":3,
+"parallelPopulations":30}

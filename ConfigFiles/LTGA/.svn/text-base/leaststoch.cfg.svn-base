@@ -1,0 +1,6 @@
+{"name":"leaststoch",
+"newway":true,
+"stochastic": true,
+"always":true,
+"smallestFirst":false,
+"novelMutation":true}

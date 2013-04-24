@@ -1,0 +1,9 @@
+{"problemName":"rose50",
+"mutation":"creep",
+"geneType":"FLT",
+"dimensions":50,
+"min":-5,
+"max":10,
+"maxFitness":0,
+"problem":"Rosenbrock",
+"scalar":100}

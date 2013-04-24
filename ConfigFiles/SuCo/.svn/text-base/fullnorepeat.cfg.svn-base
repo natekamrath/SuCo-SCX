@@ -1,0 +1,6 @@
+{
+"name":"Fullnorepeat",
+"SuCoLevel":"Support",
+"SuCoFitnessDecorators":["reeval", "joined", "relative", "distance"],
+"evalsPerGeneration":1,
+"parallelPopulations":30}

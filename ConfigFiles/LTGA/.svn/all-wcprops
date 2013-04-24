@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/research/nclab/!svn/ver/1839/trunk/SCX/ConfigFiles/LTGA
+END
+leaststoch.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/leaststoch.cfg
+END
+newway.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/newway.cfg
+END
+base.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/base.cfg
+END
+fastalways.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/fastalways.cfg
+END
+leastCommon.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/leastCommon.cfg
+END
+pairwise.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/pairwise.cfg
+END
+leastpair.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/leastpair.cfg
+END
+nolocal.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/nolocal.cfg
+END
+leastAlways.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/leastAlways.cfg
+END
+bigsmall.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/bigsmall.cfg
+END
+oldway.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/oldway.cfg
+END
+leastall.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/leastall.cfg
+END
+retune.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/research/nclab/!svn/ver/1835/trunk/SCX/ConfigFiles/LTGA/retune.cfg
+END
+stochastic.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/stochastic.cfg
+END
+mutant.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/mutant.cfg
+END
+all.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/research/nclab/!svn/ver/1814/trunk/SCX/ConfigFiles/LTGA/all.cfg
+END

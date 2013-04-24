@@ -1,0 +1,6 @@
+{
+"name":"Fullnoreeval",
+"SuCoLevel":"Support",
+"SuCoFitnessDecorators":["joined", "relative", "distance"],
+"evalsPerGeneration":1,
+"parallelPopulations":30}

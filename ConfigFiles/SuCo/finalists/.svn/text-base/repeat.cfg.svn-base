@@ -1,0 +1,7 @@
+{
+"solverName":"repeat",
+"name":"Repeat",
+"SuCoLevel":"Support",
+"SuCoFitnessDecorators":["reeval", "repeat"],
+"evalsPerGeneration":1,
+"parallelPopulations":1}

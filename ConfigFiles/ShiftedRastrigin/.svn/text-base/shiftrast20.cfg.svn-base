@@ -1,0 +1,10 @@
+{"problemName":"shiftrast20",
+"mutation":"creep",
+"geneType":"FLT",
+"dimensions":10,
+"min":-5.12,
+"max":5.12,
+"maxFitness":0,
+"problem":"ShiftedRastrigin",
+"problemSeed":0,
+"scalar":20}
