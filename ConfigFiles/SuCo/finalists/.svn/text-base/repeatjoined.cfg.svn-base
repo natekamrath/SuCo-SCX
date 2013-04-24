@@ -1,7 +1,0 @@
-{
-"solverName":"repeatjoined",
-"name":"Repeatjoined",
-"SuCoLevel":"Support",
-"SuCoFitnessDecorators":["reeval", "repeat", "joined"],
-"evalsPerGeneration":1,
-"parallelPopulations":1}

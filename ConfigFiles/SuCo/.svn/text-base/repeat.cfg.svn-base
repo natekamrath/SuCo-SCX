@@ -1,6 +1,0 @@
-{
-"name":"Repeat",
-"SuCoLevel":"Support",
-"SuCoFitnessDecorators":["reeval"],
-"evalsPerGeneration":3,
-"parallelPopulations":30}

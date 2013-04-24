@@ -1,7 +1,0 @@
-{
-"solverName":"split",
-"name":"Split",
-"SuCoLevel":"Support",
-"SuCoFitnessDecorators":[],
-"evalsPerGeneration":1,
-"parallelPopulations":1}
