@@ -138,9 +138,20 @@ class CoPopulation(Population):
 class MutationCoPopulation(CoPopulation):
 	def __init__(self, constants):
 		super(MutationCoPopulation, self).__init__(constants)
-		#self.geneType = Util.moduleClasses(GeneTypes)["FLT"](0.00, 1)
-		#self.geneType = Util.moduleClasses(GeneTypes)["FLT"](constants["mutationStepSize"] - .01, constants["mutationStepSize"]+.01)
-		try:self.mutation = Util.moduleFunctions(Mutation)["tau"]
+		"""
+		upperBound = abs(random.gauss(constants["mutationStepSize"], constants["mutationStepSize"]))
+		lowerBound = abs(random.gauss(constants["mutationStepSize"], constants["mutationStepSize"]))
+		if lowerBound > upperBound:
+			temp = lowerBound
+			lowerBound = upperBound
+			upperBound = temp
+		"""
+		self.geneType = Util.moduleClasses(GeneTypes)["MutationIndividualGene"](0.00, 1, constants["mutationStepSize"]) #good and great with gaussian mutation.
+		#self.geneType = Util.moduleClasses(GeneTypes)["MutationIndividualGene"](0.00, 1) #not as good....inconsistent
+		#self.geneType = Util.moduleClasses(GeneTypes)["FLT"](lowerBound, upperBound)
+		#self.geneType = Util.moduleClasses(GeneTypes)["FLT"](constants["mutationStepSize"], constants["mutationStepSize"], False)
+		#try:self.mutation = Util.moduleFunctions(Mutation)["creep"] # good not as good as gaussian
+		try:self.mutation = Util.moduleFunctions(Mutation)["gaussian"] # better
 		except KeyError: print "ERROR: no mutation specified for mutation copopulation"
 	def generator(self, constants):
 		for _ in self.initialIndividuals(constants):
@@ -205,7 +216,13 @@ class SCXCoPopulation(CoPopulation):
 			self.individuals = self.survivorSelection(self.individuals, constants["popSize"], constants)
 			#print "evolving crossovers"
 
-class Primary(Population):	
+class Primary(Population):
+	#new crap testing mutation actually works	
+	def __init__(self, constants):
+		super(Primary, self).__init__(constants)
+		try: self.mutation = Util.moduleFunctions(Mutation)["gaussRates"]
+		except KeyError: print "ERROR: no mutation specified for scxMutation"
+		
 	def generator(self, constants, supports=None):
 		supportIndividual = None
 		for individual in self.initialIndividuals(constants):
@@ -232,6 +249,11 @@ class Primary(Population):
 					mutationSupportIndividual = supports[MutationCoPopulation]() #mutationSupport()
 					rates = mutationSupportIndividual.genes
 					supportIndividuals.append(mutationSupportIndividual)
+					"""
+					for r in rates:
+						if r != constants["mutationStepSize"]:
+							print "rates changed after creation"
+					"""
 					#print "mutation created"
 				elif "MutationCoPopulation" not in constants["supportPopulations"]:
 					bias = 1 / math.sqrt(2.0 * constants["dimensions"]) * random.gauss(0, 1)
@@ -254,6 +276,13 @@ class Primary(Population):
 				
 				if constants["SuCoLevel"] == "Static":
 					rates = constants["stepSizes"]
+					
+				"""
+				for r in rates:
+					if r != constants["mutationStepSize"]:
+						print "rates changed"
+				"""
+						
 				self.mutation(child, constants, rates)
 				self.geneType.fix(child.genes)
 				yield child, supportIndividuals

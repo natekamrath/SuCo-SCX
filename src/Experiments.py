@@ -29,7 +29,7 @@ def oneRun(constants, evaluation, sheet = None):
 			lastImproved = evals
 			created.append((evals, child.fitness, child))
 			best = child
-
+	print best.fitness
 	return created
 
 def basic(constants):

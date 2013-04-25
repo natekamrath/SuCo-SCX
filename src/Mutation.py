@@ -16,8 +16,10 @@ def creep(child, constants, parents=None):
 
 def gaussian(child, constants, parents=None):
     step = constants["mutationStepSize"]
+    rate = constants["mutationRate"]
     for g in range(len(child.genes)):
-        child.genes[g] += random.gauss(0, step)
+		if random.random() < rate: #comment this part out and mutate every gene performance offset rast much better
+			child.genes[g] += random.gauss(0, step)
 
 def scxOriginal(child, constants, parents=None):
     rate = constants["mutationRate"] * constants['dimensions'] / len(child.crossover.genes)
@@ -52,9 +54,11 @@ def scxMinor(child, constants, parents=None):
             else:
                 child.crossover.genes[g].special = random.choice(constructTypes)()
 
-def gaussRates(child, constants, rates):
-    for g in range(len(child.genes)):
-        child.genes[g] += random.gauss(0, rates[g])
+def gaussRates(child, constants, stepSizes):
+	rate = constants["mutationRate"]
+	for g in range(len(child.genes)):
+		if random.random() < rate: #added
+			child.genes[g] += random.gauss(0, stepSizes[g])
 
 def tau(child, constants, parents=None):
     bias = 1 / math.sqrt(2.0 * constants["dimensions"]) * random.gauss(0, 1)
