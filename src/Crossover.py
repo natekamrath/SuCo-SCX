@@ -219,11 +219,13 @@ class Crossover(object):
 
 	def fixedPointReproduction(self, other, constants):
 		"""
-		Performs a fixed point reproduction with the crossover operator on the specified individuals.
+		Performs a fixed point reproduction to produce new SCX operators.
 		
 		Parameters:
 		
-		-``other``: The other 
+		-``other``: The other SCX individual.
+		
+		-``constants``: Config settings for the EA from the config files specified at run time
 		"""
 		child = Crossover(0)
 		p1genes = random.randint(0, len(self.genes))
@@ -239,26 +241,6 @@ class Crossover(object):
 		if len(child.genes) == 0:
 			child.genes = [random.choice((self.genes[0], other.genes[-1]))]
 		return child
-
-	def variableReproduction(self, other, constants):
-		child = Crossover(0)
-		myStart, otherStart = random.randint(0, len(self.genes)), random.randint(0, len(other.genes))
-		child.genes = [self.genes[(myStart + i) % len(self.genes)] for i in range(random.randint(0, len(self.genes)))] + \
-			[other.genes[(otherStart + i) % len(other.genes)] for i in range(random.randint(0, len(other.genes)))]
-		if len(child.genes) == 0:
-			child.genes = [random.choice(self.genes + other.genes)]
-		while len(child.genes) > constants["dimensions"] * 2:
-			del child.genes[random.randint(0, len(child.genes) - 1)]
-		return child
-
-	def randomReproduction(self, other, constants):
-		return Crossover(random.randint(1, min(len(self.genes) + len(other.genes), constants["dimensions"] * 2)))
-
-	def randomFixedLengthReproduction(self, other, constants={}):
-		return Crossover((len(self.genes) + len(other.genes)) / 2)
-
-	def randomLengthReproduction(self, other, constants):
-		return Crossover(random.randint(1, constants["dimensions"] * 2))
 
 def uniform(child, parents, constants={}):
 	"""
