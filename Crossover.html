@@ -56,14 +56,17 @@
             
   <div class="section" id="module-Crossover">
 <span id="crossover-module"></span><h1>Crossover Module<a class="headerlink" href="#module-Crossover" title="Permalink to this headline">¶</a></h1>
+<p>This module contains the SCX crossover oprator as well as all other crossover operator algorithms</p>
 <dl class="class">
 <dt id="Crossover.Construct">
 <em class="property">class </em><tt class="descclassname">Crossover.</tt><tt class="descname">Construct</tt><a class="reference internal" href="_modules/Crossover.html#Construct"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Construct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Base class for SCX operator primitive parameters</p>
 <dl class="method">
 <dt id="Crossover.Construct.getValue">
 <tt class="descname">getValue</tt><big>(</big><em>prev</em>, <em>length</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Construct.getValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Construct.getValue" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>returns the value of the construct</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -71,15 +74,22 @@
 <dt id="Crossover.Crossover">
 <em class="property">class </em><tt class="descclassname">Crossover.</tt><tt class="descname">Crossover</tt><big>(</big><em>initialLength</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Crossover"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Crossover" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>SCX class.  This class holds a crossover operator which can be self-adapted or evolved.</p>
 <dl class="method">
 <dt id="Crossover.Crossover.execute">
 <tt class="descname">execute</tt><big>(</big><em>genes</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Crossover.execute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Crossover.execute" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs the crossover encoded in self on <tt class="docutils literal"><span class="pre">genes</span></tt>.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">genes</span></tt>: the genes for the crossover operation.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Crossover.Crossover.fixedPointReproduction">
 <tt class="descname">fixedPointReproduction</tt><big>(</big><em>other</em>, <em>constants</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Crossover.fixedPointReproduction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Crossover.fixedPointReproduction" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs a fixed point reproduction with the crossover operator on the specified individuals.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">other</span></tt>: The other</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Crossover.Crossover.randomFixedLengthReproduction">
@@ -107,10 +117,15 @@
 <dt id="Crossover.Inline">
 <em class="property">class </em><tt class="descclassname">Crossover.</tt><tt class="descname">Inline</tt><a class="reference internal" href="_modules/Crossover.html#Inline"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Inline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Crossover.Construct" title="Crossover.Construct"><tt class="xref py py-class docutils literal"><span class="pre">Crossover.Construct</span></tt></a></p>
+<p>Class for the Inline construct</p>
 <dl class="method">
 <dt id="Crossover.Inline.getValue">
 <tt class="descname">getValue</tt><big>(</big><em>prev</em>, <em>length</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Inline.getValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Inline.getValue" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the value of the construct</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">prev</span></tt>: The previous construct</p>
+<p>-<tt class="docutils literal"><span class="pre">length</span></tt>: The length of the Inline operation</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -118,6 +133,7 @@
 <dt id="Crossover.Merge">
 <em class="property">class </em><tt class="descclassname">Crossover.</tt><tt class="descname">Merge</tt><a class="reference internal" href="_modules/Crossover.html#Merge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Merge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Crossover.Primitive" title="Crossover.Primitive"><tt class="xref py py-class docutils literal"><span class="pre">Crossover.Primitive</span></tt></a></p>
+<p>Class for the Merge primitive.  This primitive performs a merge function similar to that of arithmetic crossover</p>
 <dl class="method">
 <dt id="Crossover.Merge.execute">
 <tt class="descname">execute</tt><big>(</big><em>genes</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Merge.execute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Merge.execute" title="Permalink to this definition">¶</a></dt>
@@ -129,10 +145,15 @@
 <dt id="Crossover.Number">
 <em class="property">class </em><tt class="descclassname">Crossover.</tt><tt class="descname">Number</tt><a class="reference internal" href="_modules/Crossover.html#Number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Number" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Crossover.Construct" title="Crossover.Construct"><tt class="xref py py-class docutils literal"><span class="pre">Crossover.Construct</span></tt></a></p>
+<p>Class for the <tt class="docutils literal"><span class="pre">Number</span></tt> construct</p>
 <dl class="method">
 <dt id="Crossover.Number.getValue">
 <tt class="descname">getValue</tt><big>(</big><em>prev</em>, <em>length</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Number.getValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Number.getValue" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the value of the construct</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">prev</span></tt>: Previous construct. Unused in the <tt class="docutils literal"><span class="pre">Number</span></tt> construct</p>
+<p>-<tt class="docutils literal"><span class="pre">length</span></tt>: Length of the construct. Unused in the <tt class="docutils literal"><span class="pre">Number</span></tt> construct</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -140,20 +161,30 @@
 <dt id="Crossover.Primitive">
 <em class="property">class </em><tt class="descclassname">Crossover.</tt><tt class="descname">Primitive</tt><a class="reference internal" href="_modules/Crossover.html#Primitive"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Primitive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Class for the Primitive object.  This is the base class for SCX primitives.</p>
 <dl class="method">
 <dt id="Crossover.Primitive.execute">
 <tt class="descname">execute</tt><big>(</big><em>genes</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Primitive.execute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Primitive.execute" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs the primitive function on the specified genes. Should be overridden by child class.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Crossover.Primitive.getValues">
 <tt class="descname">getValues</tt><big>(</big><em>genes</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Primitive.getValues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Primitive.getValues" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the value start and end genes</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">genes</span></tt>: List of genes which the primitive is performing the crossover on.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Crossover.Primitive.weightedAverage">
 <tt class="descname">weightedAverage</tt><big>(</big><em>x</em>, <em>y</em>, <em>weight</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Primitive.weightedAverage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Primitive.weightedAverage" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the weighted average of the two values</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">x</span></tt>: The first value (usually of a primitive).</p>
+<p>-<tt class="docutils literal"><span class="pre">y</span></tt>: The second value (usually of a primitive).</p>
+<p>-<tt class="docutils literal"><span class="pre">weight</span></tt>: The weight for the weighted average computation.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -161,10 +192,15 @@
 <dt id="Crossover.Random">
 <em class="property">class </em><tt class="descclassname">Crossover.</tt><tt class="descname">Random</tt><a class="reference internal" href="_modules/Crossover.html#Random"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Random" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Crossover.Construct" title="Crossover.Construct"><tt class="xref py py-class docutils literal"><span class="pre">Crossover.Construct</span></tt></a></p>
+<p>Class for the <tt class="docutils literal"><span class="pre">Random</span></tt> construct</p>
 <dl class="method">
 <dt id="Crossover.Random.getValue">
 <tt class="descname">getValue</tt><big>(</big><em>prev</em>, <em>length</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Random.getValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Random.getValue" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the value of the construct</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">prev</span></tt>: Previous construct. Unused in the <tt class="docutils literal"><span class="pre">Number</span></tt> construct</p>
+<p>-<tt class="docutils literal"><span class="pre">length</span></tt>: Length of the construct. Unused in the <tt class="docutils literal"><span class="pre">Number</span></tt> construct</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -172,37 +208,67 @@
 <dt id="Crossover.Swap">
 <em class="property">class </em><tt class="descclassname">Crossover.</tt><tt class="descname">Swap</tt><a class="reference internal" href="_modules/Crossover.html#Swap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Swap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Crossover.Primitive" title="Crossover.Primitive"><tt class="xref py py-class docutils literal"><span class="pre">Crossover.Primitive</span></tt></a></p>
+<p>Class for the swap primitive.  This primitive functions like the swap function of traditional crossover operators.</p>
 <dl class="method">
 <dt id="Crossover.Swap.execute">
 <tt class="descname">execute</tt><big>(</big><em>genes</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#Swap.execute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.Swap.execute" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs a swap function on the specified genes</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">genes</span></tt>: The genes which are to be swapped</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="Crossover.arithmetic">
 <tt class="descclassname">Crossover.</tt><tt class="descname">arithmetic</tt><big>(</big><em>child</em>, <em>parents</em>, <em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#arithmetic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.arithmetic" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Arithmetic crossover algorithm.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child being created by the crossover.</p>
+<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>: List of parents which will be used to create the child.</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="Crossover.npoint">
 <tt class="descclassname">Crossover.</tt><tt class="descname">npoint</tt><big>(</big><em>child</em>, <em>parents</em>, <em>constants</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#npoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.npoint" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>N-Point crossover algorithm.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child being created by the crossover.</p>
+<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>: List of parents which will be used to create the child.</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="Crossover.scx">
 <tt class="descclassname">Crossover.</tt><tt class="descname">scx</tt><big>(</big><em>child</em>, <em>parents</em>, <em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#scx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.scx" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>SCX crossover algorithm.  Performs the crossover specified by the parents&#8217; crossover operators.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child being created by the crossover.</p>
+<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>: List of parents which will be used to create the child.</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="Crossover.scxFromSupport">
 <tt class="descclassname">Crossover.</tt><tt class="descname">scxFromSupport</tt><big>(</big><em>child</em>, <em>parents</em>, <em>scx</em>, <em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#scxFromSupport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.scxFromSupport" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs the scx crossover with individuals from a SCX support population.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child being created by the crossover.</p>
+<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>: List of parents which will be used to create the child.</p>
+<p>-<tt class="docutils literal"><span class="pre">scx</span></tt>: The scx operator from the support population.</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="Crossover.uniform">
 <tt class="descclassname">Crossover.</tt><tt class="descname">uniform</tt><big>(</big><em>child</em>, <em>parents</em>, <em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Crossover.html#uniform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Crossover.uniform" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Uniform crossover algorithm.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child being created by the crossover.</p>
+<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>: List of parents which will be used to create the child.</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 </div>
 

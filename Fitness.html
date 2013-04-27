@@ -56,152 +56,19 @@
             
   <div class="section" id="module-Fitness">
 <span id="fitness-module"></span><h1>Fitness Module<a class="headerlink" href="#module-Fitness" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="Fitness.DTrap">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">DTrap</tt><big>(</big><em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#DTrap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.DTrap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.DTrap.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#DTrap.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.DTrap.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Fitness.DeceptiveStepTrap">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">DeceptiveStepTrap</tt><big>(</big><em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#DeceptiveStepTrap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.DeceptiveStepTrap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.StepTrap" title="Fitness.StepTrap"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.StepTrap</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.DeceptiveStepTrap.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#DeceptiveStepTrap.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.DeceptiveStepTrap.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<p>This module contains fitness functions which can be used as benchmark problems to test EAs.</p>
 <dl class="class">
 <dt id="Fitness.FitnessFunction">
 <em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">FitnessFunction</tt><big>(</big><em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#FitnessFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.FitnessFunction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Base class for fitness functions</p>
 <dl class="method">
 <dt id="Fitness.FitnessFunction.eval">
 <tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#FitnessFunction.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.FitnessFunction.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
 </dd></dl>
-
-<dl class="class">
-<dt id="Fitness.Griewank">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">Griewank</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Griewank"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Griewank" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.Griewank.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Griewank.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Griewank.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Fitness.JumpK">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">JumpK</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#JumpK"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.JumpK" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.JumpK.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#JumpK.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.JumpK.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Fitness.MaxSpaceDTrap">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">MaxSpaceDTrap</tt><big>(</big><em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#MaxSpaceDTrap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.MaxSpaceDTrap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.MaxSpaceDTrap.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#MaxSpaceDTrap.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.MaxSpaceDTrap.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Fitness.Meta">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">Meta</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Meta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Meta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.Meta.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Meta.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Meta.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.Meta.scale">
-<tt class="descname">scale</tt><big>(</big><em>child</em>, <em>name</em>, <em>lower</em>, <em>upper</em>, <em>makeInt=True</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Meta.scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Meta.scale" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Fitness.NK">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">NK</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#NK"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NK" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
-<dl class="attribute">
-<dt id="Fitness.NK.answers">
-<tt class="descname">answers</tt><em class="property"> = {}</em><a class="headerlink" href="#Fitness.NK.answers" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NK.buildEpistasis">
-<tt class="descname">buildEpistasis</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/Fitness.html#NK.buildEpistasis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NK.buildEpistasis" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NK.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#NK.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NK.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NK.getFitness">
-<tt class="descname">getFitness</tt><big>(</big><em>g</em>, <em>genes</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#NK.getFitness"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NK.getFitness" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NK.minimumFaster">
-<tt class="descname">minimumFaster</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/Fitness.html#NK.minimumFaster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NK.minimumFaster" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NK.solve">
-<tt class="descname">solve</tt><big>(</big><em>direction</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#NK.solve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NK.solve" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NK.solveFaster">
-<tt class="descname">solveFaster</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/Fitness.html#NK.solveFaster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NK.solveFaster" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NK.updateAnswers">
-<tt class="descname">updateAnswers</tt><big>(</big><em>newInfo</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#NK.updateAnswers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NK.updateAnswers" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Fitness.NeighborNK">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">NeighborNK</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#NeighborNK"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NeighborNK" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.NK" title="Fitness.NK"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.NK</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.NeighborNK.buildEpistasis">
-<tt class="descname">buildEpistasis</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/Fitness.html#NeighborNK.buildEpistasis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NeighborNK.buildEpistasis" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NeighborNK.multiF">
-<tt class="descname">multiF</tt><big>(</big><em>fitness</em>, <em>chunk</em>, <em>a</em>, <em>b</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#NeighborNK.multiF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NeighborNK.multiF" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.NeighborNK.solve">
-<tt class="descname">solve</tt><big>(</big><em>direction</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#NeighborNK.solve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.NeighborNK.solve" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -212,18 +79,10 @@
 <dl class="method">
 <dt id="Fitness.OffsetRastrigin.eval">
 <tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#OffsetRastrigin.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.OffsetRastrigin.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
 </dd></dl>
-
-<dl class="class">
-<dt id="Fitness.OneMax">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">OneMax</tt><big>(</big><em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#OneMax"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.OneMax" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.OneMax.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#OneMax.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.OneMax.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -231,26 +90,22 @@
 <dt id="Fitness.Rastrigin">
 <em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">Rastrigin</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rastrigin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rastrigin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
+<p>Class for the Rastrigin function.  <a class="reference external" href="http://en.wikipedia.org/wiki/Rastrigin_function">http://en.wikipedia.org/wiki/Rastrigin_function</a></p>
 <dl class="method">
 <dt id="Fitness.Rastrigin.eval">
 <tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rastrigin.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rastrigin.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Fitness.Rastrigin.function">
 <tt class="descname">function</tt><big>(</big><em>x</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rastrigin.function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rastrigin.function" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<dd><p>The fitness function</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">x</span></tt>: The solution to be evaluated by the function.</p>
 </dd></dl>
-
-<dl class="class">
-<dt id="Fitness.RiggedNK">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">RiggedNK</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#RiggedNK"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.RiggedNK" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.NK" title="Fitness.NK"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.NK</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.RiggedNK.rig">
-<tt class="descname">rig</tt><big>(</big><em>genes</em>, <em>function</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#RiggedNK.rig"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.RiggedNK.rig" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -258,15 +113,23 @@
 <dt id="Fitness.Rosenbrock">
 <em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">Rosenbrock</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rosenbrock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rosenbrock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
+<p>Class for the Rosenbrock function.  <a class="reference external" href="http://en.wikipedia.org/wiki/Rosenbrock_function">http://en.wikipedia.org/wiki/Rosenbrock_function</a></p>
 <dl class="method">
 <dt id="Fitness.Rosenbrock.eval">
 <tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rosenbrock.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rosenbrock.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Fitness.Rosenbrock.function">
 <tt class="descname">function</tt><big>(</big><em>genes</em>, <em>i</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rosenbrock.function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rosenbrock.function" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Defines the rosenbrock function.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">genes</span></tt>:  List of genes being evaluated.</p>
+<p>-<tt class="docutils literal"><span class="pre">i</span></tt>: The index of a specific gene within the solution genes.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -277,7 +140,10 @@
 <dl class="method">
 <dt id="Fitness.ShiftedRastrigin.eval">
 <tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#ShiftedRastrigin.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.ShiftedRastrigin.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -288,30 +154,12 @@
 <dl class="method">
 <dt id="Fitness.ShiftedRosenbrock.eval">
 <tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#ShiftedRosenbrock.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.ShiftedRosenbrock.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
 </dd></dl>
 
-<dl class="class">
-<dt id="Fitness.StepTrap">
-<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">StepTrap</tt><big>(</big><em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#StepTrap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.StepTrap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
-<dl class="method">
-<dt id="Fitness.StepTrap.eval">
-<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#StepTrap.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.StepTrap.eval" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Fitness.StepTrap.stepify">
-<tt class="descname">stepify</tt><big>(</big><em>trap</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#StepTrap.stepify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.StepTrap.stepify" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
-
-<dl class="function">
-<dt id="Fitness.climb">
-<tt class="descclassname">Fitness.</tt><tt class="descname">climb</tt><big>(</big><em>f</em>, <em>x</em>, <em>step</em>, <em>lower</em>, <em>upper</em>, <em>limit=200</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#climb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.climb" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </div>
 

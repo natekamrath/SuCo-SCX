@@ -56,80 +56,25 @@
             
   <div class="section" id="module-Population">
 <span id="population-module"></span><h1>Population Module<a class="headerlink" href="#module-Population" title="Permalink to this headline">¶</a></h1>
+<p>This module contains the classes for the different types of populations used in the experiments.</p>
 <dl class="class">
 <dt id="Population.CoPopulation">
 <em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">CoPopulation</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#CoPopulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.CoPopulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Population.Population" title="Population.Population"><tt class="xref py py-class docutils literal"><span class="pre">Population.Population</span></tt></a></p>
+<p>Base class for a support population.</p>
 <dl class="method">
 <dt id="Population.CoPopulation.evalPop">
 <tt class="descname">evalPop</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#CoPopulation.evalPop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.CoPopulation.evalPop" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Evaluates all the support individuals</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Population.CoPopulation.generator">
 <tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#CoPopulation.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.CoPopulation.generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<dd><p>Copopulation generator.  Should be overridden&#8221;</p>
 </dd></dl>
-
-<dl class="class">
-<dt id="Population.LTGA">
-<em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">LTGA</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Population.Population" title="Population.Population"><tt class="xref py py-class docutils literal"><span class="pre">Population.Population</span></tt></a></p>
-<dl class="method">
-<dt id="Population.LTGA.SHC">
-<tt class="descname">SHC</tt><big>(</big><em>p1index</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.SHC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.SHC" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.applyMask">
-<tt class="descname">applyMask</tt><big>(</big><em>p1</em>, <em>p2</em>, <em>mask</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.applyMask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.applyMask" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.clusterDistance">
-<tt class="descname">clusterDistance</tt><big>(</big><em>c1</em>, <em>c2</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.clusterDistance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.clusterDistance" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.cross">
-<tt class="descname">cross</tt><big>(</big><em>p1Index</em>, <em>p2Index</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.cross"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.cross" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.entropy">
-<tt class="descname">entropy</tt><big>(</big><em>genes</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.entropy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.entropy" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.generator">
-<tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.maskEqual">
-<tt class="descname">maskEqual</tt><big>(</big><em>p1</em>, <em>p2</em>, <em>mask</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.maskEqual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.maskEqual" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.mergeClosestClusters">
-<tt class="descname">mergeClosestClusters</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.mergeClosestClusters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.mergeClosestClusters" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.mutate">
-<tt class="descname">mutate</tt><big>(</big><em>p1</em>, <em>mask</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.mutate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.mutate" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.pairwiseDistance">
-<tt class="descname">pairwiseDistance</tt><big>(</big><em>c1</em>, <em>c2</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.pairwiseDistance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.pairwiseDistance" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.LTGA.updateUsed">
-<tt class="descname">updateUsed</tt><big>(</big><em>genes</em><big>)</big><a class="reference internal" href="_modules/Population.html#LTGA.updateUsed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.LTGA.updateUsed" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -137,10 +82,14 @@
 <dt id="Population.MutationCoPopulation">
 <em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">MutationCoPopulation</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#MutationCoPopulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.MutationCoPopulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Population.CoPopulation" title="Population.CoPopulation"><tt class="xref py py-class docutils literal"><span class="pre">Population.CoPopulation</span></tt></a></p>
+<p>Class for mutation support population</p>
 <dl class="method">
 <dt id="Population.MutationCoPopulation.generator">
 <tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#MutationCoPopulation.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.MutationCoPopulation.generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -148,30 +97,22 @@
 <dt id="Population.Population">
 <em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">Population</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Population"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Class for a basic EA population</p>
 <dl class="method">
 <dt id="Population.Population.generator">
 <tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Population.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population.generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.Population.getAvgFitness">
-<tt class="descname">getAvgFitness</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/Population.html#Population.getAvgFitness"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population.getAvgFitness" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Population.Population.initialIndividuals">
 <tt class="descname">initialIndividuals</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Population.initialIndividuals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population.initialIndividuals" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.Population.localSearch">
-<tt class="descname">localSearch</tt><big>(</big><em>index</em><big>)</big><a class="reference internal" href="_modules/Population.html#Population.localSearch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population.localSearch" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="Population.Population.unique">
-<tt class="descname">unique</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Population.unique"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population.unique" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Creates the initial population of random individuals.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -179,10 +120,14 @@
 <dt id="Population.Primary">
 <em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">Primary</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Primary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Primary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Population.Population" title="Population.Population"><tt class="xref py py-class docutils literal"><span class="pre">Population.Population</span></tt></a></p>
+<p>Class for the primary individual populations</p>
 <dl class="method">
 <dt id="Population.Primary.generator">
 <tt class="descname">generator</tt><big>(</big><em>constants</em>, <em>supports=None</em><big>)</big><a class="reference internal" href="_modules/Population.html#Primary.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Primary.generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -190,15 +135,22 @@
 <dt id="Population.SCXCoPopulation">
 <em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">SCXCoPopulation</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SCXCoPopulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SCXCoPopulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Population.CoPopulation" title="Population.CoPopulation"><tt class="xref py py-class docutils literal"><span class="pre">Population.CoPopulation</span></tt></a></p>
+<p>Class for the SCX operator support population.</p>
 <dl class="method">
 <dt id="Population.SCXCoPopulation.generator">
 <tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SCXCoPopulation.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SCXCoPopulation.generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="Population.SCXCoPopulation.initialIndividuals">
 <tt class="descname">initialIndividuals</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SCXCoPopulation.initialIndividuals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SCXCoPopulation.initialIndividuals" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Creates the initial random population.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -206,10 +158,14 @@
 <dt id="Population.SuCo">
 <em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">SuCo</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SuCo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SuCo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#Population.Population" title="Population.Population"><tt class="xref py py-class docutils literal"><span class="pre">Population.Population</span></tt></a></p>
+<p>Class for the Supportive Coevoution Population as a whole.  Contains all Primary and Support Populations</p>
 <dl class="method">
 <dt id="Population.SuCo.generator">
 <tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SuCo.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SuCo.generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
+</dd></dl>
 
 </dd></dl>
 
