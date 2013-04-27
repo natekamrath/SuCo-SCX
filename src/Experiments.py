@@ -1,3 +1,7 @@
+"""
+This module contains code for running experiments
+"""
+
 import os
 import Population
 import Util
@@ -9,7 +13,15 @@ from Population import Individual
 import Crossover
 
 def oneRun(constants, evaluation, sheet = None):
+	"""
+	Performs one run of the experiment
 	
+	Parameters:
+	
+	-``constants``: Config settings for the EA from the config files specified at run time
+	
+	-``evaluation``: Fitness function.  From ``Fitness`` Module
+	"""
 	created = []
 	if "popType" in constants:
 		pop = Util.moduleClasses(Population)[constants["popType"]](constants)
@@ -33,6 +45,13 @@ def oneRun(constants, evaluation, sheet = None):
 	return created
 
 def basic(constants):
+	"""
+	Runs a basic experiment
+	
+	Parameters:
+	
+	-``constants``: Config settings for the EA from the config files specified at run time
+	"""
 	try: random.seed(constants["seed"])
 	except KeyError: pass
 
@@ -42,7 +61,10 @@ def basic(constants):
 		constants["runNumber"] = run
 		evaluation = Util.moduleClasses(Fitness)[constants["problem"]](constants).eval
 		results.append(oneRun(constants, evaluation))
-	return Analysis.metaFilter(results, constants), results
+	data = []
+	for i in results:
+		data.append(i[-1][1])
+	return Analysis.meanstd(data), results
 	
 
 
