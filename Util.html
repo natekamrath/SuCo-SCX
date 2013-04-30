@@ -36,6 +36,9 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="SurvivorSelection.html" title="SurvivorSelection Module"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
@@ -47,8 +50,74 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="util-module">
-<h1>Util Module<a class="headerlink" href="#util-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-Util">
+<span id="util-module"></span><h1>Util Module<a class="headerlink" href="#module-Util" title="Permalink to this headline">¶</a></h1>
+<p>This module contains utilities and tools for gathering information about classes, class methods, and functions.</p>
+<dl class="function">
+<dt id="Util.childClasses">
+<tt class="descclassname">Util.</tt><tt class="descname">childClasses</tt><big>(</big><em>objType</em><big>)</big><a class="reference internal" href="_modules/Util.html#childClasses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Util.childClasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all the child classes of the specified class type.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">objType</span></tt>: They object type whose children are to be found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Util.classMethods">
+<tt class="descclassname">Util.</tt><tt class="descname">classMethods</tt><big>(</big><em>classType</em><big>)</big><a class="reference internal" href="_modules/Util.html#classMethods"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Util.classMethods" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of methods within a certain class.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">classType</span></tt>: The class whose methods are being retrieved.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Util.flip">
+<tt class="descclassname">Util.</tt><tt class="descname">flip</tt><big>(</big><em>number</em><big>)</big><a class="reference internal" href="_modules/Util.html#flip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Util.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flips a number</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">number</span></tt>: The number to be flipped.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Util.loadConfiguration">
+<tt class="descclassname">Util.</tt><tt class="descname">loadConfiguration</tt><big>(</big><em>filename</em><big>)</big><a class="reference internal" href="_modules/Util.html#loadConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Util.loadConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads a configuration file.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">filename</span></tt>: the file name of the configuration file to be loaded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Util.loadConfigurations">
+<tt class="descclassname">Util.</tt><tt class="descname">loadConfigurations</tt><big>(</big><em>filenames</em><big>)</big><a class="reference internal" href="_modules/Util.html#loadConfigurations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Util.loadConfigurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads multiple configuration files.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">filenames</span></tt>:  list of file names for the configuration files to be loaded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Util.moduleClasses">
+<tt class="descclassname">Util.</tt><tt class="descname">moduleClasses</tt><big>(</big><em>module</em><big>)</big><a class="reference internal" href="_modules/Util.html#moduleClasses"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Util.moduleClasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of classes from the specified module.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">module</span></tt>: The module to get classes from.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Util.moduleFunctions">
+<tt class="descclassname">Util.</tt><tt class="descname">moduleFunctions</tt><big>(</big><em>module</em><big>)</big><a class="reference internal" href="_modules/Util.html#moduleFunctions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Util.moduleFunctions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of functions from the specified module.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">module</span></tt>: The module to get functions from.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Util.saveConfiguration">
+<tt class="descclassname">Util.</tt><tt class="descname">saveConfiguration</tt><big>(</big><em>filename</em>, <em>data</em><big>)</big><a class="reference internal" href="_modules/Util.html#saveConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Util.saveConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves a configuration file</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">filename</span></tt>: The name of the file to save the configs to.</p>
+<p>-<tt class="docutils literal"><span class="pre">data</span></tt>: The data to write to the config file being saved.</p>
+</dd></dl>
+
 </div>
 
 
@@ -88,6 +157,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="SurvivorSelection.html" title="SurvivorSelection Module"
              >previous</a> |</li>

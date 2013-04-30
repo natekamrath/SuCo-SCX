@@ -37,6 +37,9 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="Population.html" title="Population Module"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -51,8 +54,29 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="parentselection-module">
-<h1>ParentSelection Module<a class="headerlink" href="#parentselection-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-ParentSelection">
+<span id="parentselection-module"></span><h1>ParentSelection Module<a class="headerlink" href="#module-ParentSelection" title="Permalink to this headline">¶</a></h1>
+<p>This module contains the parent selection algorithms</p>
+<dl class="function">
+<dt id="ParentSelection.elitist">
+<tt class="descclassname">ParentSelection.</tt><tt class="descname">elitist</tt><big>(</big><em>individuals</em>, <em>number</em>, <em>constants={}</em><big>)</big><a class="reference internal" href="_modules/ParentSelection.html#elitist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ParentSelection.elitist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard elitist selection operator</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">individuals</span></tt>: The population of individuals which can be chosen from.</p>
+<p>-<tt class="docutils literal"><span class="pre">number</span></tt>: The number of individuals to pick for survival.</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time.  Defaults to an empty dictionary</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ParentSelection.tournament">
+<tt class="descclassname">ParentSelection.</tt><tt class="descname">tournament</tt><big>(</big><em>individuals</em>, <em>number</em>, <em>constants</em><big>)</big><a class="reference internal" href="_modules/ParentSelection.html#tournament"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ParentSelection.tournament" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard k tournament selection operator with replacement</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">individuals</span></tt>: The population of individuals which can be chosen from.</p>
+<p>-<tt class="docutils literal"><span class="pre">number</span></tt>: The number of individuals to pick for survival.</p>
+<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time.</p>
+</dd></dl>
+
 </div>
 
 
@@ -95,6 +119,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="Population.html" title="Population Module"
              >next</a> |</li>
