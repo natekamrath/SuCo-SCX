@@ -1,3 +1,6 @@
+"""
+This module contains the parent selection algorithms
+"""
 import random
 
 def tournament(individuals, number, constants):
