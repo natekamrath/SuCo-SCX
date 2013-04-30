@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Mutation Module &mdash; src  documentation</title>
+    <title>Mutation Module &mdash; Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="src  documentation" href="index.html" />
+    <link rel="top" title="Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation" href="index.html" />
     <link rel="next" title="ParentSelection Module" href="ParentSelection.html" />
     <link rel="prev" title="Individuals Module" href="Individuals.html" /> 
   </head>
@@ -37,15 +37,12 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="ParentSelection.html" title="ParentSelection Module"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="Individuals.html" title="Individuals Module"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">src  documentation</a> &raquo;</li> 
+        <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -54,69 +51,8 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="module-Mutation">
-<span id="mutation-module"></span><h1>Mutation Module<a class="headerlink" href="#module-Mutation" title="Permalink to this headline">¶</a></h1>
-<p>This module contains the mutation algorithms.</p>
-<dl class="function">
-<dt id="Mutation.bitFlip">
-<tt class="descclassname">Mutation.</tt><tt class="descname">bitFlip</tt><big>(</big><em>child</em>, <em>constants</em>, <em>parents=None</em><big>)</big><a class="reference internal" href="_modules/Mutation.html#bitFlip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Mutation.bitFlip" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns a child mutated by a bit flip mutation.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child individual to be mutated.</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time.</p>
-<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>:  the parents <tt class="docutils literal"><span class="pre">child</span></tt>.  Defaults to None.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="Mutation.creep">
-<tt class="descclassname">Mutation.</tt><tt class="descname">creep</tt><big>(</big><em>child</em>, <em>constants</em>, <em>parents=None</em><big>)</big><a class="reference internal" href="_modules/Mutation.html#creep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Mutation.creep" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns a child mutated by a creep mutation.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child individual to be mutated.</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time.</p>
-<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>:  the parents <tt class="docutils literal"><span class="pre">child</span></tt>.  Defaults to None.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="Mutation.gaussRates">
-<tt class="descclassname">Mutation.</tt><tt class="descname">gaussRates</tt><big>(</big><em>child</em>, <em>constants</em>, <em>stepSizes</em><big>)</big><a class="reference internal" href="_modules/Mutation.html#gaussRates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Mutation.gaussRates" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns a child mutated by a gaussian mutation with custom step sizes</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child individual to be mutated.</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time.</p>
-<p>-<tt class="docutils literal"><span class="pre">stepSizes</span></tt>:  a list of stepSizes to be used in the mutation of each individual gene.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="Mutation.gaussian">
-<tt class="descclassname">Mutation.</tt><tt class="descname">gaussian</tt><big>(</big><em>child</em>, <em>constants</em>, <em>parents=None</em><big>)</big><a class="reference internal" href="_modules/Mutation.html#gaussian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Mutation.gaussian" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns a child mutated by a gaussian mutation.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child individual to be mutated.</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time.</p>
-<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>:  the parents <tt class="docutils literal"><span class="pre">child</span></tt>.  Defaults to None.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="Mutation.scxOriginal">
-<tt class="descclassname">Mutation.</tt><tt class="descname">scxOriginal</tt><big>(</big><em>child</em>, <em>constants</em>, <em>parents=None</em><big>)</big><a class="reference internal" href="_modules/Mutation.html#scxOriginal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Mutation.scxOriginal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Special SCX operator mutation function.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child SCX individual to be mutated.</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time.</p>
-<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>:  the parents <tt class="docutils literal"><span class="pre">child</span></tt>.  Defaults to None.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="Mutation.tau">
-<tt class="descclassname">Mutation.</tt><tt class="descname">tau</tt><big>(</big><em>child</em>, <em>constants</em>, <em>parents=None</em><big>)</big><a class="reference internal" href="_modules/Mutation.html#tau"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Mutation.tau" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns a child mutated by a tau mutation.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child individual to be mutated.</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time.</p>
-<p>-<tt class="docutils literal"><span class="pre">parents</span></tt>:  the parents <tt class="docutils literal"><span class="pre">child</span></tt>.  Defaults to None.</p>
-</dd></dl>
-
+  <div class="section" id="mutation-module">
+<h1>Mutation Module<a class="headerlink" href="#mutation-module" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
@@ -160,15 +96,12 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="ParentSelection.html" title="ParentSelection Module"
              >next</a> |</li>
         <li class="right" >
           <a href="Individuals.html" title="Individuals Module"
              >previous</a> |</li>
-        <li><a href="index.html">src  documentation</a> &raquo;</li> 
+        <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

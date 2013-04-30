@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Population Module &mdash; src  documentation</title>
+    <title>Population Module &mdash; Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="src  documentation" href="index.html" />
+    <link rel="top" title="Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation" href="index.html" />
     <link rel="next" title="SurvivorSelection Module" href="SurvivorSelection.html" />
     <link rel="prev" title="ParentSelection Module" href="ParentSelection.html" /> 
   </head>
@@ -37,15 +37,12 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="SurvivorSelection.html" title="SurvivorSelection Module"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="ParentSelection.html" title="ParentSelection Module"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">src  documentation</a> &raquo;</li> 
+        <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -54,121 +51,8 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="module-Population">
-<span id="population-module"></span><h1>Population Module<a class="headerlink" href="#module-Population" title="Permalink to this headline">¶</a></h1>
-<p>This module contains the classes for the different types of populations used in the experiments.</p>
-<dl class="class">
-<dt id="Population.CoPopulation">
-<em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">CoPopulation</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#CoPopulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.CoPopulation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Population.Population" title="Population.Population"><tt class="xref py py-class docutils literal"><span class="pre">Population.Population</span></tt></a></p>
-<p>Base class for a support population.</p>
-<dl class="method">
-<dt id="Population.CoPopulation.evalPop">
-<tt class="descname">evalPop</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#CoPopulation.evalPop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.CoPopulation.evalPop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates all the support individuals</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="Population.CoPopulation.generator">
-<tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#CoPopulation.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.CoPopulation.generator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Copopulation generator.  Should be overridden&#8221;</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Population.MutationCoPopulation">
-<em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">MutationCoPopulation</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#MutationCoPopulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.MutationCoPopulation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Population.CoPopulation" title="Population.CoPopulation"><tt class="xref py py-class docutils literal"><span class="pre">Population.CoPopulation</span></tt></a></p>
-<p>Class for mutation support population</p>
-<dl class="method">
-<dt id="Population.MutationCoPopulation.generator">
-<tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#MutationCoPopulation.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.MutationCoPopulation.generator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Population.Population">
-<em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">Population</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Population"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
-<p>Class for a basic EA population</p>
-<dl class="method">
-<dt id="Population.Population.generator">
-<tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Population.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population.generator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="Population.Population.initialIndividuals">
-<tt class="descname">initialIndividuals</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Population.initialIndividuals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Population.initialIndividuals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates the initial population of random individuals.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Population.Primary">
-<em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">Primary</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#Primary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Primary" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Population.Population" title="Population.Population"><tt class="xref py py-class docutils literal"><span class="pre">Population.Population</span></tt></a></p>
-<p>Class for the primary individual populations</p>
-<dl class="method">
-<dt id="Population.Primary.generator">
-<tt class="descname">generator</tt><big>(</big><em>constants</em>, <em>supports=None</em><big>)</big><a class="reference internal" href="_modules/Population.html#Primary.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.Primary.generator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Population.SCXCoPopulation">
-<em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">SCXCoPopulation</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SCXCoPopulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SCXCoPopulation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Population.CoPopulation" title="Population.CoPopulation"><tt class="xref py py-class docutils literal"><span class="pre">Population.CoPopulation</span></tt></a></p>
-<p>Class for the SCX operator support population.</p>
-<dl class="method">
-<dt id="Population.SCXCoPopulation.generator">
-<tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SCXCoPopulation.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SCXCoPopulation.generator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="Population.SCXCoPopulation.initialIndividuals">
-<tt class="descname">initialIndividuals</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SCXCoPopulation.initialIndividuals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SCXCoPopulation.initialIndividuals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates the initial random population.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="Population.SuCo">
-<em class="property">class </em><tt class="descclassname">Population.</tt><tt class="descname">SuCo</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SuCo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SuCo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#Population.Population" title="Population.Population"><tt class="xref py py-class docutils literal"><span class="pre">Population.Population</span></tt></a></p>
-<p>Class for the Supportive Coevoution Population as a whole.  Contains all Primary and Support Populations</p>
-<dl class="method">
-<dt id="Population.SuCo.generator">
-<tt class="descname">generator</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Population.html#SuCo.generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Population.SuCo.generator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Carries out the standard evolutionary process of parent selection, evolution, and survivor selection.</p>
-<p>Parameters:</p>
-<p>-<tt class="docutils literal"><span class="pre">constants</span></tt>: Config settings for the EA from the config files specified at run time</p>
-</dd></dl>
-
-</dd></dl>
-
+  <div class="section" id="population-module">
+<h1>Population Module<a class="headerlink" href="#population-module" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
@@ -212,15 +96,12 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="SurvivorSelection.html" title="SurvivorSelection Module"
              >next</a> |</li>
         <li class="right" >
           <a href="ParentSelection.html" title="ParentSelection Module"
              >previous</a> |</li>
-        <li><a href="index.html">src  documentation</a> &raquo;</li> 
+        <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
