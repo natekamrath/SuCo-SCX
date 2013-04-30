@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Crossover &mdash; Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for Crossover</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">Util</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">Mutation</span>
+
+<div class="viewcode-block" id="Construct"><a class="viewcode-back" href="../Crossover.html#Crossover.Construct">[docs]</a><span class="k">class</span> <span class="nc">Construct</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Construct.getValue"><a class="viewcode-back" href="../Crossover.html#Crossover.Construct.getValue">[docs]</a>    <span class="k">def</span> <span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&quot;A construct did not override getValue&quot;</span><span class="p">)</span>
+</div></div>
+<div class="viewcode-block" id="Number"><a class="viewcode-back" href="../Crossover.html#Crossover.Number">[docs]</a><span class="k">class</span> <span class="nc">Number</span><span class="p">(</span><span class="n">Construct</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Number.getValue"><a class="viewcode-back" href="../Crossover.html#Crossover.Number.getValue">[docs]</a>    <span class="k">def</span> <span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span></div>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Random"><a class="viewcode-back" href="../Crossover.html#Crossover.Random">[docs]</a><span class="k">class</span> <span class="nc">Random</span><span class="p">(</span><span class="n">Construct</span><span class="p">):</span>
+<div class="viewcode-block" id="Random.getValue"><a class="viewcode-back" href="../Crossover.html#Crossover.Random.getValue">[docs]</a>    <span class="k">def</span> <span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span></div>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&quot;RAND&quot;</span>
+</div>
+<div class="viewcode-block" id="Inline"><a class="viewcode-back" href="../Crossover.html#Crossover.Inline">[docs]</a><span class="k">class</span> <span class="nc">Inline</span><span class="p">(</span><span class="n">Construct</span><span class="p">):</span>
+<div class="viewcode-block" id="Inline.getValue"><a class="viewcode-back" href="../Crossover.html#Crossover.Inline.getValue">[docs]</a>    <span class="k">def</span> <span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">prev</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">prev</span> <span class="o">+</span> <span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span> <span class="o">%</span> <span class="n">length</span></div>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&quot;INLINE&quot;</span>
+</div>
+<div class="viewcode-block" id="Primitive"><a class="viewcode-back" href="../Crossover.html#Crossover.Primitive">[docs]</a><span class="k">class</span> <span class="nc">Primitive</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">constructTypes</span> <span class="o">=</span> <span class="n">Util</span><span class="o">.</span><span class="n">childClasses</span><span class="p">(</span><span class="n">Construct</span><span class="p">)</span>
+        <span class="n">constructTypes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">Inline</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">constructTypes</span> <span class="o">+</span> <span class="p">[</span><span class="n">Inline</span><span class="p">])()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">constructTypes</span> <span class="o">+</span> <span class="p">[</span><span class="n">Inline</span><span class="p">])()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">special</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">constructTypes</span><span class="p">)()</span>
+
+<div class="viewcode-block" id="Primitive.getValues"><a class="viewcode-back" href="../Crossover.html#Crossover.Primitive.getValues">[docs]</a>    <span class="k">def</span> <span class="nf">getValues</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genes</span><span class="p">):</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">genes</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">end</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="c"># Both Inline</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="n">end</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="n">end</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Primitive.execute"><a class="viewcode-back" href="../Crossover.html#Crossover.Primitive.execute">[docs]</a>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genes</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&quot;Primitive did not override execute&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Primitive.weightedAverage"><a class="viewcode-back" href="../Crossover.html#Crossover.Primitive.weightedAverage">[docs]</a>    <span class="k">def</span> <span class="nf">weightedAverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">weight</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">weight</span><span class="p">)</span>
+</div>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span> <span class="o">+</span> <span class="s">&quot;Start:</span><span class="si">%s</span><span class="s">, End:</span><span class="si">%s</span><span class="s">, Special:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">special</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Swap"><a class="viewcode-back" href="../Crossover.html#Crossover.Swap">[docs]</a><span class="k">class</span> <span class="nc">Swap</span><span class="p">(</span><span class="n">Primitive</span><span class="p">):</span>
+<div class="viewcode-block" id="Swap.execute"><a class="viewcode-back" href="../Crossover.html#Crossover.Swap.execute">[docs]</a>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genes</span><span class="p">):</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">genes</span><span class="p">)</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getValues</span><span class="p">(</span><span class="n">genes</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">special</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">length</span><span class="p">))</span>
+
+        <span class="n">startPiece</span> <span class="o">=</span> <span class="p">[</span><span class="n">genes</span><span class="p">[(</span><span class="n">start</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">length</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">)]</span>
+        <span class="n">endPiece</span> <span class="o">=</span> <span class="p">[</span><span class="n">genes</span><span class="p">[(</span><span class="n">end</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">length</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">)]</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+            <span class="n">genes</span><span class="p">[(</span><span class="n">start</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">length</span><span class="p">]</span> <span class="o">=</span> <span class="n">endPiece</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">genes</span><span class="p">[(</span><span class="n">end</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">length</span><span class="p">]</span> <span class="o">=</span> <span class="n">startPiece</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</div></div>
+<div class="viewcode-block" id="Merge"><a class="viewcode-back" href="../Crossover.html#Crossover.Merge">[docs]</a><span class="k">class</span> <span class="nc">Merge</span><span class="p">(</span><span class="n">Primitive</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Merge.execute"><a class="viewcode-back" href="../Crossover.html#Crossover.Merge.execute">[docs]</a>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genes</span><span class="p">):</span>
+        <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getValues</span><span class="p">(</span><span class="n">genes</span><span class="p">)</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">special</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span> <span class="o">/</span> <span class="mf">10000.0</span>
+        <span class="n">genes</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">genes</span><span class="p">[</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weightedAverage</span><span class="p">(</span><span class="n">genes</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">genes</span><span class="p">[</span><span class="n">end</span><span class="p">],</span> <span class="n">weight</span><span class="p">),</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">weightedAverage</span><span class="p">(</span><span class="n">genes</span><span class="p">[</span><span class="n">end</span><span class="p">],</span> <span class="n">genes</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">weight</span><span class="p">))</span></div></div>
+<div class="viewcode-block" id="Crossover"><a class="viewcode-back" href="../Crossover.html#Crossover.Crossover">[docs]</a><span class="k">class</span> <span class="nc">Crossover</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initialLength</span><span class="p">):</span>
+        <span class="n">primitives</span> <span class="o">=</span> <span class="n">Util</span><span class="o">.</span><span class="n">childClasses</span><span class="p">(</span><span class="n">Primitive</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">primitives</span><span class="p">)()</span> <span class="k">for</span> <span class="n">iterator</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">initialLength</span><span class="p">)]</span>
+
+<div class="viewcode-block" id="Crossover.execute"><a class="viewcode-back" href="../Crossover.html#Crossover.Crossover.execute">[docs]</a>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">genes</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">primitive</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">:</span>
+            <span class="n">primitive</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">genes</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">genes</span>
+</div>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="s">&quot;Crossover{&quot;</span>
+        <span class="k">for</span> <span class="n">primitive</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">primitive</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">+=</span> <span class="s">&quot;}&quot;</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+<div class="viewcode-block" id="Crossover.fixedPointReproduction"><a class="viewcode-back" href="../Crossover.html#Crossover.Crossover.fixedPointReproduction">[docs]</a>    <span class="k">def</span> <span class="nf">fixedPointReproduction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">constants</span><span class="p">):</span>
+        <span class="n">child</span> <span class="o">=</span> <span class="n">Crossover</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">p1genes</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">))</span>
+        <span class="n">p2genes</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">))</span>
+        <span class="n">over</span> <span class="o">=</span> <span class="n">p1genes</span> <span class="o">+</span> <span class="n">p2genes</span> <span class="o">-</span> <span class="mi">200</span>
+        <span class="k">if</span> <span class="n">over</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">p1genes</span> <span class="o">-=</span> <span class="n">over</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="n">p2genes</span> <span class="o">-=</span> <span class="n">over</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="c"># Ensure non negative</span>
+            <span class="n">p1genes</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">p1genes</span><span class="p">)</span>
+            <span class="n">p2genes</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">p2genes</span><span class="p">)</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">[:</span><span class="n">p1genes</span><span class="p">]</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">[</span><span class="n">p2genes</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))]</span>
+        <span class="k">return</span> <span class="n">child</span>
+</div>
+<div class="viewcode-block" id="Crossover.variableReproduction"><a class="viewcode-back" href="../Crossover.html#Crossover.Crossover.variableReproduction">[docs]</a>    <span class="k">def</span> <span class="nf">variableReproduction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">constants</span><span class="p">):</span>
+        <span class="n">child</span> <span class="o">=</span> <span class="n">Crossover</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">myStart</span><span class="p">,</span> <span class="n">otherStart</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">)),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">))</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">[(</span><span class="n">myStart</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">)))]</span> <span class="o">+</span> \
+            <span class="p">[</span><span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">[(</span><span class="n">otherStart</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">)))]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">)]</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">constants</span><span class="p">[</span><span class="s">&quot;dimensions&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">child</span>
+</div>
+<div class="viewcode-block" id="Crossover.randomReproduction"><a class="viewcode-back" href="../Crossover.html#Crossover.Crossover.randomReproduction">[docs]</a>    <span class="k">def</span> <span class="nf">randomReproduction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">constants</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Crossover</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">),</span> <span class="n">constants</span><span class="p">[</span><span class="s">&quot;dimensions&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)))</span>
+</div>
+<div class="viewcode-block" id="Crossover.randomFixedLengthReproduction"><a class="viewcode-back" href="../Crossover.html#Crossover.Crossover.randomFixedLengthReproduction">[docs]</a>    <span class="k">def</span> <span class="nf">randomFixedLengthReproduction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">constants</span><span class="o">=</span><span class="p">{}):</span>
+        <span class="k">return</span> <span class="n">Crossover</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">genes</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Crossover.randomLengthReproduction"><a class="viewcode-back" href="../Crossover.html#Crossover.Crossover.randomLengthReproduction">[docs]</a>    <span class="k">def</span> <span class="nf">randomLengthReproduction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">constants</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Crossover</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">constants</span><span class="p">[</span><span class="s">&quot;dimensions&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
+</div></div>
+<div class="viewcode-block" id="uniform"><a class="viewcode-back" href="../Crossover.html#Crossover.uniform">[docs]</a><span class="k">def</span> <span class="nf">uniform</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">parents</span><span class="p">,</span> <span class="n">constants</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="n">maxCommon</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">parents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span>
+    <span class="c"># maxCommon = min(len(parent.genes) for parent in parents)</span>
+    <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">parent</span><span class="o">.</span><span class="n">genes</span><span class="p">[</span><span class="n">g</span><span class="p">]</span> <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">])</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxCommon</span><span class="p">)]</span>
+    <span class="c"># TODO Handle unequal length genes better</span>
+</div>
+<div class="viewcode-block" id="npoint"><a class="viewcode-back" href="../Crossover.html#Crossover.npoint">[docs]</a><span class="k">def</span> <span class="nf">npoint</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">parents</span><span class="p">,</span> <span class="n">constants</span><span class="p">):</span>
+    <span class="n">numberOfPoints</span> <span class="o">=</span> <span class="n">constants</span><span class="p">[</span><span class="s">&quot;numberOfPoints&quot;</span><span class="p">]</span>
+    <span class="n">maxCommon</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">)</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">maxCommon</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">numberOfPoints</span><span class="p">,</span> <span class="n">maxCommon</span><span class="p">)))</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxCommon</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">points</span><span class="p">:</span> <span class="n">parent</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parents</span><span class="p">[</span><span class="n">parent</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">parents</span><span class="p">)]</span><span class="o">.</span><span class="n">genes</span><span class="p">[</span><span class="n">g</span><span class="p">])</span>
+</div>
+<div class="viewcode-block" id="arithmetic"><a class="viewcode-back" href="../Crossover.html#Crossover.arithmetic">[docs]</a><span class="k">def</span> <span class="nf">arithmetic</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">parents</span><span class="p">,</span> <span class="n">constants</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="k">for</span> <span class="n">values</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">parent</span><span class="o">.</span><span class="n">genes</span> <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">])]</span>
+</div>
+<div class="viewcode-block" id="scx"><a class="viewcode-back" href="../Crossover.html#Crossover.scx">[docs]</a><span class="k">def</span> <span class="nf">scx</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">parents</span><span class="p">,</span> <span class="n">constants</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="k">if</span> <span class="n">parents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">crossover</span> <span class="o">!=</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">crossover</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">method</span> <span class="o">=</span> <span class="n">Util</span><span class="o">.</span><span class="n">classMethods</span><span class="p">(</span><span class="n">Crossover</span><span class="p">)[</span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;scxRecombination&quot;</span><span class="p">]]</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">crossover</span> <span class="o">=</span> <span class="n">method</span><span class="p">(</span><span class="n">parents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">crossover</span><span class="p">,</span> <span class="p">(</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">crossover</span><span class="p">),</span> <span class="n">constants</span><span class="p">)</span>
+        <span class="n">mutation</span> <span class="o">=</span> <span class="n">Util</span><span class="o">.</span><span class="n">moduleFunctions</span><span class="p">(</span><span class="n">Mutation</span><span class="p">)[</span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;scxMutation&quot;</span><span class="p">]]</span>
+        <span class="n">mutation</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">constants</span><span class="p">)</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">crossover</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">parents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">genes</span> <span class="o">+</span> <span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&quot;Trying to SCX when parent&#39;s crossover is None&quot;</span><span class="p">)</span>
+        
+        </div>
+<div class="viewcode-block" id="scxFromSupport"><a class="viewcode-back" href="../Crossover.html#Crossover.scxFromSupport">[docs]</a><span class="k">def</span> <span class="nf">scxFromSupport</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">parents</span><span class="p">,</span> <span class="n">scx</span><span class="p">,</span> <span class="n">constants</span><span class="o">=</span><span class="p">{}):</span>
+	<span class="k">if</span> <span class="n">scx</span><span class="o">.</span><span class="n">crossover</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+		<span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="n">scx</span><span class="o">.</span><span class="n">crossover</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">parents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">genes</span> <span class="o">+</span> <span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span>
+		<span class="n">child</span><span class="o">.</span><span class="n">genes</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">genes</span><span class="p">)</span> <span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&quot;SCX from support was None&quot;</span><span class="p">)</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Nathaniel R. Kamrath, Brian W. Goldman, Daniel R. Tauritz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

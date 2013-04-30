@@ -1,0 +1,35 @@
+These pages provide code documentation for the Using Supportive Coevolution to Evolve Self-Configuring Crossover paper published in the
+Genetic and Evolutionary Computation Conference 2013 by Nathaniel R. Kamrath, Brian W. Goldman and Daniel R. Tauritz.
+For support questions feel free to email nrkxwb@mst.edu, brianwgoldman@acm.org or 
+dtauritz@acm.org.
+
+The source for this code is available from git hub at: https://github.com/natekamrath/SuCo-SCX
+
+To clone use: https://github.com/natekamrath/SuCo-SCX.git
+
+Using Supportive Coevolution to Evolve Self-Configuring Crossover
+=================================================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 4
+
+   Analysis
+   Crossover
+   Experiments
+   Fitness
+   GeneTypes
+   Individuals
+   Mutation
+   ParentSelection
+   Population
+   SurvivorSelection
+   Util
+
+
+Indices and tables
+==================
+
+* :ref:`modindex`
+

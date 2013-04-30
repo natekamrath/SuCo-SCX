@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GeneTypes Module &mdash; Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation" href="index.html" />
+    <link rel="next" title="Individuals Module" href="Individuals.html" />
+    <link rel="prev" title="Fitness Module" href="Fitness.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Individuals.html" title="Individuals Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Fitness.html" title="Fitness Module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-GeneTypes">
+<span id="genetypes-module"></span><h1>GeneTypes Module<a class="headerlink" href="#module-GeneTypes" title="Permalink to this headline">¶</a></h1>
+<p>This module contains classes for the different Individual&#8217;s gene types.</p>
+<dl class="class">
+<dt id="GeneTypes.FLT">
+<em class="property">class </em><tt class="descclassname">GeneTypes.</tt><tt class="descname">FLT</tt><big>(</big><em>minimum</em>, <em>maximum</em>, <em>shouldFix=True</em><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#FLT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.FLT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#GeneTypes.GeneType" title="GeneTypes.GeneType"><tt class="xref py py-class docutils literal"><span class="pre">GeneTypes.GeneType</span></tt></a></p>
+<p>Class for floating point gene types.</p>
+<dl class="method">
+<dt id="GeneTypes.FLT.fix">
+<tt class="descname">fix</tt><big>(</big><em>genes</em><big>)</big><a class="headerlink" href="#GeneTypes.FLT.fix" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for fixing FLT genes</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">genes</span></tt>: A list of genes to be fixed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GeneTypes.FLT.randomValue">
+<tt class="descname">randomValue</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#FLT.randomValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.FLT.randomValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a random value within the genes allowed min and max values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="GeneTypes.GeneType">
+<em class="property">class </em><tt class="descclassname">GeneTypes.</tt><tt class="descname">GeneType</tt><big>(</big><em>minimum</em>, <em>maximum</em><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#GeneType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.GeneType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Base class for the gene types.</p>
+<dl class="method">
+<dt id="GeneTypes.GeneType.fix">
+<tt class="descname">fix</tt><big>(</big><em>genes</em><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#GeneType.fix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.GeneType.fix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="GeneTypes.GeneType.fixGene">
+<tt class="descname">fixGene</tt><big>(</big><em>gene</em><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#GeneType.fixGene"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.GeneType.fixGene" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="GeneTypes.GeneType.randomGenome">
+<tt class="descname">randomGenome</tt><big>(</big><em>length</em><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#GeneType.randomGenome"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.GeneType.randomGenome" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="GeneTypes.INT">
+<em class="property">class </em><tt class="descclassname">GeneTypes.</tt><tt class="descname">INT</tt><big>(</big><em>minimum</em>, <em>maximum</em><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#INT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.INT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#GeneTypes.GeneType" title="GeneTypes.GeneType"><tt class="xref py py-class docutils literal"><span class="pre">GeneTypes.GeneType</span></tt></a></p>
+<p>Class for gens with type integer</p>
+<dl class="method">
+<dt id="GeneTypes.INT.fixGene">
+<tt class="descname">fixGene</tt><big>(</big><em>gene</em><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#INT.fixGene"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.INT.fixGene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fixes the gene if the value is not a valid INT gene type.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">gene</span></tt>: The gene to be fixed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GeneTypes.INT.randomValue">
+<tt class="descname">randomValue</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/GeneTypes.html#INT.randomValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#GeneTypes.INT.randomValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="GeneTypes.MutationIndividualGene">
+<em class="property">class </em><tt class="descclassname">GeneTypes.</tt><tt class="descname">MutationIndividualGene</tt><big>(</big><em>minimum</em>, <em>maximum</em>, <em>initialValue='random'</em>, <em>shouldFix=True</em><big>)</big><a class="headerlink" href="#GeneTypes.MutationIndividualGene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#GeneTypes.GeneType" title="GeneTypes.GeneType"><tt class="xref py py-class docutils literal"><span class="pre">GeneTypes.GeneType</span></tt></a></p>
+<p>Class for mutation support individual gene type.</p>
+<dl class="method">
+<dt id="GeneTypes.MutationIndividualGene.fix">
+<tt class="descname">fix</tt><big>(</big><em>genes</em><big>)</big><a class="headerlink" href="#GeneTypes.MutationIndividualGene.fix" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for fixing FLT genes</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">genes</span></tt>: A list of genes to be fixed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GeneTypes.MutationIndividualGene.randomValue">
+<tt class="descname">randomValue</tt><big>(</big><big>)</big><a class="headerlink" href="#GeneTypes.MutationIndividualGene.randomValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a random value within the bounds of the gene&#8217;s min and max values if the initial value is random.  Otherwise returns the initial value.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Fitness.html"
+                        title="previous chapter">Fitness Module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Individuals.html"
+                        title="next chapter">Individuals Module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/GeneTypes.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Individuals.html" title="Individuals Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Fitness.html" title="Fitness Module"
+             >previous</a> |</li>
+        <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Nathaniel R. Kamrath, Brian W. Goldman, Daniel R. Tauritz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

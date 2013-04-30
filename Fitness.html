@@ -1,0 +1,223 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Fitness Module &mdash; Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation" href="index.html" />
+    <link rel="next" title="GeneTypes Module" href="GeneTypes.html" />
+    <link rel="prev" title="Experiments Module" href="Experiments.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="GeneTypes.html" title="GeneTypes Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Experiments.html" title="Experiments Module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-Fitness">
+<span id="fitness-module"></span><h1>Fitness Module<a class="headerlink" href="#module-Fitness" title="Permalink to this headline">¶</a></h1>
+<p>This module contains fitness functions which can be used as benchmark problems to test EAs.</p>
+<dl class="class">
+<dt id="Fitness.FitnessFunction">
+<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">FitnessFunction</tt><big>(</big><em>constants={}</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#FitnessFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.FitnessFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Base class for fitness functions</p>
+<dl class="method">
+<dt id="Fitness.FitnessFunction.eval">
+<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#FitnessFunction.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.FitnessFunction.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Fitness.OffsetRastrigin">
+<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">OffsetRastrigin</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#OffsetRastrigin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.OffsetRastrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Fitness.Rastrigin" title="Fitness.Rastrigin"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.Rastrigin</span></tt></a></p>
+<dl class="method">
+<dt id="Fitness.OffsetRastrigin.eval">
+<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#OffsetRastrigin.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.OffsetRastrigin.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Fitness.Rastrigin">
+<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">Rastrigin</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rastrigin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rastrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
+<p>Class for the Rastrigin function.  <a class="reference external" href="http://en.wikipedia.org/wiki/Rastrigin_function">http://en.wikipedia.org/wiki/Rastrigin_function</a></p>
+<dl class="method">
+<dt id="Fitness.Rastrigin.eval">
+<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rastrigin.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rastrigin.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Fitness.Rastrigin.function">
+<tt class="descname">function</tt><big>(</big><em>x</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rastrigin.function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rastrigin.function" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fitness function</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">x</span></tt>: The solution to be evaluated by the function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Fitness.Rosenbrock">
+<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">Rosenbrock</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rosenbrock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rosenbrock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Fitness.FitnessFunction" title="Fitness.FitnessFunction"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.FitnessFunction</span></tt></a></p>
+<p>Class for the Rosenbrock function.  <a class="reference external" href="http://en.wikipedia.org/wiki/Rosenbrock_function">http://en.wikipedia.org/wiki/Rosenbrock_function</a></p>
+<dl class="method">
+<dt id="Fitness.Rosenbrock.eval">
+<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rosenbrock.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rosenbrock.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Fitness.Rosenbrock.function">
+<tt class="descname">function</tt><big>(</big><em>genes</em>, <em>i</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#Rosenbrock.function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.Rosenbrock.function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the rosenbrock function.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">genes</span></tt>:  List of genes being evaluated.</p>
+<p>-<tt class="docutils literal"><span class="pre">i</span></tt>: The index of a specific gene within the solution genes.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Fitness.ShiftedRastrigin">
+<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">ShiftedRastrigin</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#ShiftedRastrigin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.ShiftedRastrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Fitness.Rastrigin" title="Fitness.Rastrigin"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.Rastrigin</span></tt></a></p>
+<dl class="method">
+<dt id="Fitness.ShiftedRastrigin.eval">
+<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#ShiftedRastrigin.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.ShiftedRastrigin.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Fitness.ShiftedRosenbrock">
+<em class="property">class </em><tt class="descclassname">Fitness.</tt><tt class="descname">ShiftedRosenbrock</tt><big>(</big><em>constants</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#ShiftedRosenbrock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.ShiftedRosenbrock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Fitness.Rosenbrock" title="Fitness.Rosenbrock"><tt class="xref py py-class docutils literal"><span class="pre">Fitness.Rosenbrock</span></tt></a></p>
+<dl class="method">
+<dt id="Fitness.ShiftedRosenbrock.eval">
+<tt class="descname">eval</tt><big>(</big><em>child</em><big>)</big><a class="reference internal" href="_modules/Fitness.html#ShiftedRosenbrock.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Fitness.ShiftedRosenbrock.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates a child or possible solution.</p>
+<p>Parameters:</p>
+<p>-<tt class="docutils literal"><span class="pre">child</span></tt>: The child to be evaluated by the fitness function.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Experiments.html"
+                        title="previous chapter">Experiments Module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="GeneTypes.html"
+                        title="next chapter">GeneTypes Module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/Fitness.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="GeneTypes.html" title="GeneTypes Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Experiments.html" title="Experiments Module"
+             >previous</a> |</li>
+        <li><a href="index.html">Using Supportive Coevolution to Evolve Self-Configuring Crossover  documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Nathaniel R. Kamrath, Brian W. Goldman, Daniel R. Tauritz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
