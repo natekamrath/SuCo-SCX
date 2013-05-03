@@ -1,9 +1,0 @@
-{"problemName":"trap7",
-"geneType":"INT",
-"mutation":"bitFlip",
-"dimensions":105,
-"min":0,
-"max":1,
-"maxFitness":1,
-"problem":"DTrap",
-"trapSize":7}

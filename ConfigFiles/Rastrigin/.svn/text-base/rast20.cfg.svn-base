@@ -1,9 +1,0 @@
-{"problemName":"rast20",
-"mutation":"creep",
-"geneType":"FLT",
-"dimensions":20,
-"min":-5.12,
-"max":5.12,
-"maxFitness":0,
-"problem":"Rastrigin",
-"scalar":10}

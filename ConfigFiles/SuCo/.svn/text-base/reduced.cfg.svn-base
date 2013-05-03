@@ -1,7 +1,0 @@
-{
-"solverName":"reduced",
-"name":"Reduced",
-"SuCoLevel":"Support",
-"SuCoFitnessDecorators":["reeval","relative", "distance"],
-"evalsPerGeneration":1,
-"parallelPopulations":1}

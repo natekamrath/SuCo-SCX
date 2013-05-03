@@ -1,6 +1,0 @@
-{
-"name":"JustJoined",
-"SuCoLevel":"Support",
-"SuCoFitnessDecorators":["joined"],
-"evalsPerGeneration":1,
-"parallelPopulations":30}

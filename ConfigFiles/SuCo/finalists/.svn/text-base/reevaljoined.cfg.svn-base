@@ -1,7 +1,0 @@
-{
-"solverName":"reevaljoined",
-"name":"Reevaluationjoined",
-"SuCoLevel":"Support",
-"SuCoFitnessDecorators":["reeval", "joined"],
-"evalsPerGeneration":1,
-"parallelPopulations":1}
